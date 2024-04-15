@@ -11,10 +11,10 @@ const RestaurantCard = ({
   image: string;
 }) => {
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg m-4 backdrop-blur-sm">
+    <div className="max-w-xs rounded-2xl overflow-hidden shadow-lg m-4 backdrop-blur-sm bg-[rgb(226,232,178)] shadow-red-600">
       <img className="w-full h-56 object-cover" src={image} alt={name} />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{name}</div>
+        <div className="font-bold text-xl mb-2 text-black">{name}</div>
         <p className="text-gray-700 text-base">{description}</p>
       </div>
       <div className="px-6 py-4">

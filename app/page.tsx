@@ -3,43 +3,8 @@ import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import RestaurantCard from "./(components)/ResturantCard";
 import Link from "next/link";
-
-const Header = () => {
-  return (
-    <header className=" text-white py-4 px-6 flex justify-between items-center max-w-[88rem] m-auto">
-      <div>
-        <Link href="/" className="text-xl font-semibold">
-          Lawdena Bhojyam
-        </Link>
-      </div>
-      <nav>
-        <ul className="flex space-x-4">
-          <li>
-            <Link href="/menu" className="hover:text-gray-300">
-              Menu
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-gray-300">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
-};
-
-const Footer = () => {
-  return (
-    <footer className=" text-white py-4 px-6 text-center">
-      <p>
-        &copy; {new Date().getFullYear()} Your Restaurant Name. All Rights
-        Reserved.
-      </p>
-    </footer>
-  );
-};
+import Header from "./header";
+import Footer from "./footer";
 
 const Page = () => {
   const indianFoods = [
@@ -68,39 +33,21 @@ const Page = () => {
 
   return (
     <>
-      <Header />
       <div className="mt-20 p-6 max-w-[88rem] m-auto">
         <div className="relative">
           <img
-            src="https://www.chenabgourmet.com/wp-content/uploads/2022/05/Blog-Designs-12.png"
+            src="kl.jpeg"
             alt="food-banner"
-            className="w-full rounded-2xl h-[80vh] bg-no-repeat brightness-60 filter hidden md:block shadow-2xl shadow-red-600"
+            className="w-full rounded-2xl h-[80vh] bg-no-repeat brightness-60 filter hidden md:block shadow-2xl shadow-yellow-400"
           />
-          <div className="text-6xl  absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 p-8 pl-14 z-10 hidden md:block backdrop-blur-sm">
-            <div className=" font-bold text-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.9)] tracking-wide font-Raleway italic ">
-              Aa jao <div className="h-[20px]"></div>
-              Gaand me lelo
-            </div>
-          </div>
+          <div className="text-6xl  absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 p-8 pl-14 z-10 hidden md:block backdrop-blur-sm"></div>
         </div>
         <div className="flex p-7 mt-5">
           <div className=" p-5 w-full">
-            <div className=" text-xl font-Raleway tracking-tight backdrop-blur-sm ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              magni obcaecati adipisci omnis, assumenda suscipit quam architecto
-              quisquam ipsum aliquid rerum esse sint eum, soluta iste facilis,
-              ipsa laudantium. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Esse veritatis voluptates magni, ad corporis
-              accusamus dolore quisquam sint? Quaerat fuga ea possimus quos
-              voluptates mollitia quod corporis accusantium nisi in? Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quas pariatur
-              consectetur sapiente, maxime nihil possimus voluptatum molestias
-              reprehenderit? Unde laboriosam nihil ut libero voluptas inventore
-              asperiores natus dolor alias quo.
-            </div>
+            <div className=" text-xl font-Raleway tracking-tight backdrop-blur-sm "></div>
             <div className="py-10">
               <Link href="/menu">
-                <button className="flex justify-center items-center gap-2  h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-red-600  hover:shadow-xl p-2 tracking-wider">
+                <button className="flex justify-center items-center gap-2  h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-yellow-400  hover:shadow-xl p-2 tracking-wider">
                   View our Menu <FaArrowRight />
                 </button>
               </Link>
@@ -109,7 +56,7 @@ const Page = () => {
         </div>
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-3xl font-semibold text-center mb-6">Try this</h2>
-          <div className="flex flex-wrap gap-8 justify-around">
+          <div className="flex flex-wrap gap-2 justify-center">
             {indianFoods.map((food, index) => (
               <RestaurantCard
                 key={index}
@@ -121,7 +68,6 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

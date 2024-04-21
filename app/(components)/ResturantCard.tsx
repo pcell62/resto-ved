@@ -11,15 +11,17 @@ const RestaurantCard = ({
   image: string;
 }) => {
   return (
-    <div className="max-w-xs rounded-2xl overflow-hidden shadow-lg m-4 backdrop-blur-sm bg-[rgb(226,232,178)] shadow-red-600">
+    <div className="max-w-xs rounded-2xl overflow-hidden shadow-lg m-4 backdrop-blur-sm bg-[rgb(255,255,255)] shadow-yellow-600">
       <img className="w-full h-56 object-cover" src={image} alt={name} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-black">{name}</div>
-        <p className="text-gray-700 text-base">{description}</p>
+        <p className="h-24 overflow-y-auto text-gray-700 text-base">
+          {description}
+        </p>
       </div>
       <div className="px-6 py-4">
         <Link href="/order">
-          <button className="flex justify-center items-center gap-2  h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-red-600  hover:shadow-xl p-2 tracking-wider">
+          <button className="flex justify-center items-center gap-2  h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-yellow-400  hover:shadow-xl p-2 tracking-wider">
             Order Now
           </button>
         </Link>

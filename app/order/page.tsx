@@ -271,7 +271,7 @@ const Page = () => {
           <div className="w-[100%] h-[100vh] fixed top-0 left-0 bg-[rgba(0,0,0,0.43)] z-40 flex justify-center items-center">
             <div className=" bg-white p-8 border border-gray-200 shadow-lg rounded-lg relative">
               <h2 className="text-xl font-semibold text-black mb-4">
-                Checkout
+                Checkoutt
               </h2>
               <form>
                 <input
